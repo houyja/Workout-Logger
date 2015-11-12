@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mpMain.Master.cs" Inherits="WorkoutLogger.Masterpages.mpDefault" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../StyleSheet/ssMain.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            var username = $('#lblUsername').text();
+
+            if (username == "")
+            {
+                $("#tblLoggedOut").attr("class", "tblMenu")
+                $("#tblLoggedIn").attr("class", "tblMenu_Hide");
+            }
+            else
+            {
+                $("#tblLoggedOut").attr("class", "tblMenu_Hide");
+                $("#tblLoggedIn").attr("class", "tblMenu");
+            }
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>  
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="Menu">
+            <table id="tblLoggedOut" class="tblMenu">
+                <tr>
+                    <td class="tblMenu_Title"><a href="../default.aspx">Fitness Log</a></td>
+                    <td class="tblMenu_Category"><a href="../default.aspx">Home</a></td>
+                    <td class="tblMenu_Category"><a href="../Page/wpWorkoutMain.aspx">Workout</a></td>
+                    <td class="tblMenu_Category"><a href="../default.aspx">Account</a></td>
+                    <td class="tblMenu_Register"><a id="aRegister" href="../Page/wpAccountRegistration.aspx">Register</a></td>
+                    <td class="tblMenu_Login"><a id="aLogin" href="../Page/wpAccountLogin.aspx">Log On</a></td>
+                </tr>
+            </table>
+             <table id="tblLoggedIn" class="tblMenu_Hide" >
+                <tr>
+                    <td class="tblMenu_Title"><a href="../default.aspx">Fitness Log</a></td>
+                    <td class="tblMenu_Category"><a href="../default.aspx">Home</a></td>
+                    <td class="tblMenu_Category"><a href="../Page/wpWorkoutMain.aspx">Workout</a></td>
+                    <td class="tblMenu_Category"><a href="../default.aspx">Account</a></td>
+                    <td class="tblMenu_Register"> <asp:Label ID="lblUsername" runat="server"></asp:Label></td>
+                    <td class="tblMenu_Login"><a id="aLoggOff" href="../default.aspx?Logoff=true">Log Off</a></td>
+                </tr>
+            </table>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
