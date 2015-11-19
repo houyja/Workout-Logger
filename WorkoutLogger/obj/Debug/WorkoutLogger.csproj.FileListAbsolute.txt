@@ -1,0 +1,6 @@
+c:\users\jordan\documents\visual studio 2013\Projects\WorkoutLogger\WorkoutLogger\bin\WorkoutLogger.dll.config
+c:\users\jordan\documents\visual studio 2013\Projects\WorkoutLogger\WorkoutLogger\bin\WorkoutLogger.dll
+c:\users\jordan\documents\visual studio 2013\Projects\WorkoutLogger\WorkoutLogger\bin\WorkoutLogger.pdb
+c:\users\jordan\documents\visual studio 2013\Projects\WorkoutLogger\WorkoutLogger\obj\Debug\WorkoutLogger.csprojResolveAssemblyReference.cache
+c:\users\jordan\documents\visual studio 2013\Projects\WorkoutLogger\WorkoutLogger\obj\Debug\WorkoutLogger.dll
+c:\users\jordan\documents\visual studio 2013\Projects\WorkoutLogger\WorkoutLogger\obj\Debug\WorkoutLogger.pdb

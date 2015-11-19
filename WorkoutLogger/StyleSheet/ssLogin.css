@@ -1,0 +1,62 @@
+﻿body {
+}
+
+.txtLogin{
+    font-size:xx-large;
+    width:100%;
+}
+
+.ddlLogin{
+    font-size:xx-large;
+    width:100%;
+}
+
+.tblLogin{
+    border-collapse:collapse;
+}
+
+.Quote{
+    width:45%; 
+    float:left; 
+    margin-top:2%
+}
+
+.tblLogin-Cell{
+    padding-bottom: 15px;
+}
+
+.Page{
+    margin-top:0%;
+    margin-left:10%;
+}
+
+h1{
+    margin:0%;
+}
+
+.PageDivider-left{
+    width:45%; 
+    float:left; 
+    margin-top:2%;
+    min-width:350px;
+    
+}
+.PageDivider-right{
+    width:45%; 
+    float:left; 
+    margin-top:2%;
+    min-width:350px;  
+}
+
+.divError
+{
+    color:red;
+    font:30px;
+    display:none;
+}
+
+.txtError{
+    font-size:xx-large;
+    width:100%;
+    background-color:red;
+}
