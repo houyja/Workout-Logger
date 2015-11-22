@@ -19,22 +19,48 @@ namespace WorkoutLogger.Page
 
         protected void Date_Change(object sender, EventArgs e)
         {
-            try
+            ddlWorkoutName.Items.Clear();
+            DateTime date;
+            if(DateTime.TryParse(tbxWorkoutDate.Value, out date))
             {
-                ddlWorkoutName.Items.Clear();
-                DateTime date;
-                DateTime.TryParse(tbxDate.Value, out date);
+                if (date != null)
                 {
-                    foreach (string s in dbWorkout.GetWorkouts(date, ((Account)Session["Account"]).AccountID))
+                    try
                     {
-                        ddlWorkoutName.Items.Add(s);
+                        foreach (string s in dbWorkout.GetWorkouts(date, ((Account)Session["Account"]).AccountID))
+                        {
+                            ddlWorkoutName.Items.Add(s);
+                        }
                     }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                    ddlWorkoutName.Items.Add("Create New Workout");
+                }
+                else
+                {
+                    ddlWorkoutName.Items.Add("Please Insert a Valid Date");
                 }
             }
-            catch
+            else
             {
-
+                ddlWorkoutName.Items.Add("Please Insert a Valid Date");
             }
+
+            if (ddlWorkoutName.SelectedValue == "Create New Workout")
+                txtNewWorkout.Visible = true;
+            else
+                txtNewWorkout.Visible = false;
+        }
+
+        protected void WorkoutName_Change(object sender, EventArgs e)
+        {
+            if (ddlWorkoutName.SelectedValue == "Create New Workout")
+                txtNewWorkout.Visible = true;
+            else
+                txtNewWorkout.Visible = false;
         }
     }
 }

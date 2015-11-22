@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.txtWorkoutDate{
+    font-size:40px;
+    width: 90%;
+    margin-top:1%;
+    margin-left:1%;
+}
+
+#btnSearch{
+    margin-top:0%;
+}
+
+.ddlWorkoutName{
+    font-size:xx-large;
+    width:90%;
+}
+
+.txtNewWorkout{
+    font-size:xx-large;
+    width:90%;
+}

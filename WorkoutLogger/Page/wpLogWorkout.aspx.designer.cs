@@ -13,13 +13,22 @@ namespace WorkoutLogger.Page {
     public partial class wpLogWorkout {
         
         /// <summary>
-        /// tbxDate control.
+        /// tbxWorkoutDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxDate;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText tbxWorkoutDate;
+        
+        /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnSearch;
         
         /// <summary>
         /// ddlWorkoutName control.
@@ -29,5 +38,14 @@ namespace WorkoutLogger.Page {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlWorkoutName;
+        
+        /// <summary>
+        /// txtNewWorkout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNewWorkout;
     }
 }
