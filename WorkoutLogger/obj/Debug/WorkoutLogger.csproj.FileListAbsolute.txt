@@ -4,3 +4,9 @@ c:\users\jordan\documents\visual studio 2013\Projects\WorkoutLogger\WorkoutLogge
 c:\users\jordan\documents\visual studio 2013\Projects\WorkoutLogger\WorkoutLogger\obj\Debug\WorkoutLogger.csprojResolveAssemblyReference.cache
 c:\users\jordan\documents\visual studio 2013\Projects\WorkoutLogger\WorkoutLogger\obj\Debug\WorkoutLogger.dll
 c:\users\jordan\documents\visual studio 2013\Projects\WorkoutLogger\WorkoutLogger\obj\Debug\WorkoutLogger.pdb
+C:\Users\Jordan\Documents\GitHub\WorkoutLogger\Workout-Logger\WorkoutLogger\bin\WorkoutLogger.dll.config
+C:\Users\Jordan\Documents\GitHub\WorkoutLogger\Workout-Logger\WorkoutLogger\bin\WorkoutLogger.dll
+C:\Users\Jordan\Documents\GitHub\WorkoutLogger\Workout-Logger\WorkoutLogger\bin\WorkoutLogger.pdb
+C:\Users\Jordan\Documents\GitHub\WorkoutLogger\Workout-Logger\WorkoutLogger\obj\Debug\WorkoutLogger.csprojResolveAssemblyReference.cache
+C:\Users\Jordan\Documents\GitHub\WorkoutLogger\Workout-Logger\WorkoutLogger\obj\Debug\WorkoutLogger.dll
+C:\Users\Jordan\Documents\GitHub\WorkoutLogger\Workout-Logger\WorkoutLogger\obj\Debug\WorkoutLogger.pdb

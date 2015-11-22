@@ -21,28 +21,41 @@ namespace WorkoutLogger.Database
             db.Set_CONNECTION(new SqlConnection(location));
             db.Set_COMMAND("spGetWorkoutNameByDate");
             db.ADD_INPUT_PARAMATER("@prID", System.Data.SqlDbType.VarChar, ID, -1);
-            db.ADD_INPUT_PARAMATER("@prDate", System.Data.SqlDbType.Date, date, -1);
-            db.ADD_OUTPUT_PARAMATER("@prWorkouts", System.Data.SqlDbType.VarChar, ID, -1);
+            db.ADD_INPUT_PARAMATER("@prDate", System.Data.SqlDbType.Date, date.ToShortDateString(), -1);
+            db.ADD_OUTPUT_PARAMATER("@outWorkouts", System.Data.SqlDbType.VarChar, ID, -1);
             db.EXECUTE_COMMAND();
 
-            string result = (string)db.GET_PARAMATER("@prWorkouts");
+            string result = (string)db.GET_PARAMATER("@outWorkouts");
             string search = ", ";
             int lastfound = 0;
             List<string> results = new List<string>();
 
-            for (int i = 0; i < result.Length; i++)
+            if (result != null)
             {
-                if(result.Substring(i,2) == search)
+                for (int i = 0; i < result.Length; i++)
                 {
-                    if(lastfound != 0)
+                    if (i < result.Length - 1)
                     {
-                        results.Add(result.Substring(lastfound + 1, i - lastfound + 1));
-                    }
+                        if (result.Substring(i, 2) == search)
+                        {
+                            if (lastfound != 0)
+                            {
+                                results.Add(result.Substring(lastfound + 1, i - lastfound-1));
+                            }
+                            else
+                            {
+                                results.Add(result.Substring(0, i));
+                            }
 
-                    lastfound = i+1;
+                            lastfound = i + 1;
+                        }
+                    }
+                    else
+                    {
+                        results.Add(result.Substring(lastfound + 1, i - lastfound));
+                    }
                 }
             }
-            
             return results.ToArray();
         }
     }

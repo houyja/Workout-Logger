@@ -19,21 +19,26 @@ namespace WorkoutLogger.Page
 
         protected void Date_Change(object sender, EventArgs e)
         {
-            try
+            ddlWorkoutName.Items.Clear();
+            DateTime date;
+            DateTime.TryParse(tbxWorkoutDate.Value, out date);
             {
-                ddlWorkoutName.Items.Clear();
-                DateTime date;
-                DateTime.TryParse(tbxDate.Value, out date);
+                if (date != null)
                 {
-                    foreach (string s in dbWorkout.GetWorkouts(date, ((Account)Session["Account"]).AccountID))
+                    try
                     {
-                        ddlWorkoutName.Items.Add(s);
+                        foreach (string s in dbWorkout.GetWorkouts(date, ((Account)Session["Account"]).AccountID))
+                        {
+                            ddlWorkoutName.Items.Add(s);
+                        }
                     }
-                }
-            }
-            catch
-            {
+                    catch (Exception ex)
+                    {
 
+                    }
+
+                    ddlWorkoutName.Items.Add("Create New Workout");
+                }
             }
         }
     }

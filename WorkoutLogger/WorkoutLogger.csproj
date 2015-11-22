@@ -82,6 +82,7 @@
     <Content Include="Page\wpLogWorkout.aspx" />
     <Content Include="Page\wpWorkoutMain.aspx" />
     <Content Include="StyleSheet\ssLogin.css" />
+    <Content Include="StyleSheet\ssLogWorkout.css" />
     <Content Include="StyleSheet\ssMain.css" />
     <Content Include="StyleSheet\ssRegister.css" />
     <Content Include="Web.config" />
