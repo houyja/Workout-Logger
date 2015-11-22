@@ -21,7 +21,7 @@ namespace WorkoutLogger.Page
         {
             ddlWorkoutName.Items.Clear();
             DateTime date;
-            DateTime.TryParse(tbxWorkoutDate.Value, out date);
+            if(DateTime.TryParse(tbxWorkoutDate.Value, out date))
             {
                 if (date != null)
                 {
@@ -39,7 +39,28 @@ namespace WorkoutLogger.Page
 
                     ddlWorkoutName.Items.Add("Create New Workout");
                 }
+                else
+                {
+                    ddlWorkoutName.Items.Add("Please Insert a Valid Date");
+                }
             }
+            else
+            {
+                ddlWorkoutName.Items.Add("Please Insert a Valid Date");
+            }
+
+            if (ddlWorkoutName.SelectedValue == "Create New Workout")
+                txtNewWorkout.Visible = true;
+            else
+                txtNewWorkout.Visible = false;
+        }
+
+        protected void WorkoutName_Change(object sender, EventArgs e)
+        {
+            if (ddlWorkoutName.SelectedValue == "Create New Workout")
+                txtNewWorkout.Visible = true;
+            else
+                txtNewWorkout.Visible = false;
         }
     }
 }

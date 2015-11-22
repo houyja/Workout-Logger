@@ -22,10 +22,10 @@
                 <a id="btnSearch" runat="server" onserverclick="Date_Change" class="button">Load Workouts</a>
             </td>
             <td style="width:25%">
-                <asp:DropDownList ID="ddlWorkoutName" runat="server" CssClass="ddlWorkoutName"></asp:DropDownList>
+                <asp:DropDownList ID="ddlWorkoutName" runat="server" CssClass="ddlWorkoutName" OnSelectedIndexChanged="WorkoutName_Change" AutoPostBack="true"></asp:DropDownList>
             </td>
             <td style="width:25%">
-                <input id="txtNewWorkout" runat="server" class="txtNewWorkout" />
+                <input id="txtNewWorkout" runat="server" class="txtNewWorkout" Visible="false" placeholder="Workout Name" />
             </td>
         </tr>
     </table>
