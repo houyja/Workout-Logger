@@ -35,8 +35,8 @@
     color:green;
 }
 
-.tblWorkout-Row > td{
+.tblWorkout-Cell{
     padding-top:15px;
     margin-top:15px;
-    width:20%;
+    width:10%;
 }

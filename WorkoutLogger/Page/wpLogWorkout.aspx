@@ -17,11 +17,11 @@
         <tr>
             <td>Workout:</td>
         </tr>
-        <tr class="tblWorkout-Row">
-            <td><input id="tbxWorkoutDate" runat="server" placeholder="Date" class="txtWorkoutDate" /></td>
-            <td><a id="btnSearch" runat="server" onserverclick="Date_Change" class="button">Load Workouts</a></td> 
-            <td><asp:DropDownList ID="ddlWorkoutName" runat="server" CssClass="ddlWorkoutName" OnSelectedIndexChanged="WorkoutName_Change"  AutoPostBack="true"></asp:DropDownList></td> 
-            <td><input id="txtNewWorkout" runat="server" class="txtNewWorkout" Visible="false" placeholder="Workout Name" /></td>  
+        <tr>
+            <td class="tblWorkout-Cell"><input id="tbxWorkoutDate" runat="server" placeholder="Date" class="txtWorkoutDate"/></td>
+            <td class="tblWorkout-Cell"><a id="btnSearch" runat="server" onserverclick="Date_Change" class="button" style="text-align:center">Load Workouts</a></td> 
+            <td class="tblWorkout-Cell"><asp:DropDownList ID="ddlWorkoutName" runat="server" CssClass="ddlWorkoutName" OnSelectedIndexChanged="WorkoutName_Change"  AutoPostBack="true"></asp:DropDownList></td> 
+            <td class="tblWorkout-Cell"><input id="txtNewWorkout" runat="server" class="txtNewWorkout" Visible="false" placeholder="Workout Name" /></td>  
         </tr>
         <tr>
             
