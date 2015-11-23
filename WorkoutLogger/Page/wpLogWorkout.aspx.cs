@@ -15,11 +15,17 @@ namespace WorkoutLogger.Page
         protected void Page_Load(object sender, EventArgs e)
         {
             dbWorkout = new Database.dbWorkout();
+            if (!IsPostBack)
+            {
+                WorkoutTypes_Load();
+            }
+
         }
 
         protected void Date_Change(object sender, EventArgs e)
         {
             ddlWorkoutName.Items.Clear();
+            ddlWorkoutName.Items.Add("--Select Workout--");
             DateTime date;
             if(DateTime.TryParse(tbxWorkoutDate.Value, out date))
             {
@@ -36,8 +42,7 @@ namespace WorkoutLogger.Page
                     {
 
                     }
-
-                    ddlWorkoutName.Items.Add("Create New Workout");
+                    ddlWorkoutName.Items.Add("New Workout");
                 }
                 else
                 {
@@ -46,7 +51,7 @@ namespace WorkoutLogger.Page
             }
             else
             {
-                ddlWorkoutName.Items.Add("Please Insert a Valid Date");
+                ddlWorkoutName.Items.Add("Invalid Date");
             }
 
             if (ddlWorkoutName.SelectedValue == "Create New Workout")
@@ -57,10 +62,27 @@ namespace WorkoutLogger.Page
 
         protected void WorkoutName_Change(object sender, EventArgs e)
         {
-            if (ddlWorkoutName.SelectedValue == "Create New Workout")
+            if (ddlWorkoutName.SelectedValue == "New Workout")
                 txtNewWorkout.Visible = true;
             else
                 txtNewWorkout.Visible = false;
+        }
+
+        protected void WorkoutTypes_Load()
+        {
+            ddlWorkoutType.Items.Clear();
+            ddlWorkoutType.Items.Add("--Select Type--");
+            try
+            {
+                foreach (string s in dbWorkout.GetAllWorkoutTypes())
+                {
+                    ddlWorkoutType.Items.Add(s);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

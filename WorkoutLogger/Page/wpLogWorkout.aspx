@@ -15,20 +15,36 @@
 
     <table>
         <tr>
-            <td style="width:25%">
-                <input id="tbxWorkoutDate" runat="server" placeholder="Date" class="txtWorkoutDate" />
-            </td>
-            <td style="width:20%">
-                <a id="btnSearch" runat="server" onserverclick="Date_Change" class="button">Load Workouts</a>
-            </td>
-            <td style="width:25%">
-                <asp:DropDownList ID="ddlWorkoutName" runat="server" CssClass="ddlWorkoutName" OnSelectedIndexChanged="WorkoutName_Change" AutoPostBack="true"></asp:DropDownList>
-            </td>
-            <td style="width:25%">
-                <input id="txtNewWorkout" runat="server" class="txtNewWorkout" Visible="false" placeholder="Workout Name" />
-            </td>
+            <td>Workout:</td>
+        </tr>
+        <tr class="tblWorkout-Row">
+            <td><input id="tbxWorkoutDate" runat="server" placeholder="Date" class="txtWorkoutDate" /></td>
+            <td><a id="btnSearch" runat="server" onserverclick="Date_Change" class="button">Load Workouts</a></td> 
+            <td><asp:DropDownList ID="ddlWorkoutName" runat="server" CssClass="ddlWorkoutName" OnSelectedIndexChanged="WorkoutName_Change"  AutoPostBack="true"></asp:DropDownList></td> 
+            <td><input id="txtNewWorkout" runat="server" class="txtNewWorkout" Visible="false" placeholder="Workout Name" /></td>  
+        </tr>
+        <tr>
+            
         </tr>
     </table>
+
+
+
+    <table>
+        <tr class="tblWorkout-Row">
+           
+            
+            <td></td>
+        </tr>
+        <tr class="tblWorkout-Row">
+           
+            <td><input id="txtEventName" runat="server" placeholder="EventName" class="txtEventName" /></td> 
+            <td> <asp:DropDownList ID="ddlWorkoutType" runat="server" CssClass="ddlWorkoutType"></asp:DropDownList></td> 
+        </tr>
+    </table>
+
+
+
         
         
         
