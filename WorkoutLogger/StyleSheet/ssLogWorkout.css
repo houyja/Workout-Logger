@@ -4,8 +4,6 @@
 .txtWorkoutDate{
     font-size:40px;
     width: 90%;
-    margin-top:1%;
-    margin-left:1%;
 }
 
 #btnSearch{
@@ -20,4 +18,25 @@
 .txtNewWorkout{
     font-size:xx-large;
     width:90%;
+}
+
+.txtEventName{
+    font-size:xx-large;
+    width:90%;
+}
+
+.ddlWorkoutType{
+    font-size:xx-large;
+    width:90%;
+}
+
+.ddlDefault
+{
+    color:green;
+}
+
+.tblWorkout-Row > td{
+    padding-top:15px;
+    margin-top:15px;
+    width:20%;
 }
